@@ -50,7 +50,9 @@ const Modal = () => {
             onClick={closeModalHandler}
           />
         </div>
-        <div className="modal-content">{renderComp}</div>
+        <div className={`modal-content ${modlState.mdlChildPst}`}>
+          {renderComp}
+        </div>
       </div>
     </Fragment>
   );
