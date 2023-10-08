@@ -13,7 +13,7 @@ const Content = () => {
           since the 1500s, when an unknown printer took a galley not only five
           centuries, but also the leap into electronic typesetting....
         </p>
-        <button className="btn" onClick={() => disp(openModal('LoginRegister'))}>
+        <button className="btn" onClick={() => disp(openModal('LogReg'))}>
           Read full article
         </button>
       </div>

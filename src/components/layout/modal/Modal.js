@@ -14,12 +14,19 @@ const Modal = () => {
   const disp = useDispatch();
   const closeModalHandler = () => disp(closeModal());
 
-  const compsLookUp = { login: Login, register: Register };
+  const compsLookUp = {
+    login: Login,
+    register: Register,
+    LogReg: LoginRegister,
+  };
   let renderComp;
 
   if (modlState.compName) {
-    const slctedComp = compsLookUp[modlState.compName];
+    const SlctedComp = compsLookUp[modlState.compName];
     //  console.log(typeof slctedComp);
+    if (SlctedComp) {
+      renderComp = <SlctedComp />;
+    }
   }
 
   return (
@@ -43,7 +50,7 @@ const Modal = () => {
             onClick={closeModalHandler}
           />
         </div>
-        <div className="modal-content"></div>
+        <div className="modal-content">{renderComp}</div>
       </div>
     </Fragment>
   );

@@ -8,10 +8,12 @@ const modalSlice = createSlice({
     openModal: (state, action) => {
       state.isOpen = true;
       state.compName = action.payload;
+      state.mdlChildPst = action.payload;
     },
     closeModal: (state, action) => {
       state.isOpen = false;
       state.compName = null;
+      state.mdlChildPst = null;
     },
   },
 });
