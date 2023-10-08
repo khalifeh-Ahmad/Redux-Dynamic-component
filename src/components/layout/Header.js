@@ -10,13 +10,9 @@ const Header = () => {
         <li>Home</li>
         <li>About us</li>
         <li>Contact us</li>
-      </ul> 
+      </ul>
       <ul className="header-left">
-        <li
-          onClick={() => disp(openModal({ name: "login", position: "center" }))}
-        >
-          Login
-        </li>
+        <li onClick={() => disp(openModal({ name: "login" }))}>Login</li>
         <li
           onClick={() =>
             disp(openModal({ name: "register", position: "bottom" }))

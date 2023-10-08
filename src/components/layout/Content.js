@@ -15,9 +15,7 @@ const Content = () => {
         </p>
         <button
           className="btn"
-          onClick={() =>
-            disp(openModal({ name: "LogReg", position: "center" }))
-          }
+          onClick={() => disp(openModal({ name: "LogReg" }))}
         >
           Read full article
         </button>
