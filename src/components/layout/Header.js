@@ -12,7 +12,21 @@ const Header = () => {
         <li>Contact us</li>
       </ul>
       <ul className="header-left">
-        <li onClick={() => disp(openModal({ name: "login" }))}>Login</li>
+        <li
+          onClick={() =>
+            disp(
+              openModal({
+                name: "login",
+                childrenProps: {
+                  name: "khalifeh",
+                  email: "khalifeh@hotmail.com",
+                },
+              })
+            )
+          }
+        >
+          Login
+        </li>
         <li
           onClick={() =>
             disp(openModal({ name: "register", position: "bottom" }))

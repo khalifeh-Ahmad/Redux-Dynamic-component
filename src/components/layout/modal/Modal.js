@@ -25,7 +25,7 @@ const Modal = () => {
     const SlctedComp = compsLookUp[modlState.compName];
     //  console.log(typeof slctedComp);
     if (SlctedComp) {
-      renderComp = <SlctedComp />;
+      renderComp = <SlctedComp {...modlState.childrenProps} />;
     }
   }
 

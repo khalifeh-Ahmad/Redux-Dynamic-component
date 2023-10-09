@@ -1,6 +1,11 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
-const initState = { isOpen: false, compName: null, mdlChildPst: "center" };
+const initState = {
+  isOpen: false,
+  compName: null,
+  mdlChildPst: "center",
+  childrenProps: {},
+};
 const modalSlice = createSlice({
   name: "modal",
   initialState: initState,
@@ -9,11 +14,13 @@ const modalSlice = createSlice({
       state.isOpen = true;
       state.compName = action.payload.name;
       state.mdlChildPst = action.payload.position || "center";
+      state.childrenProps = action.payload.childrenProps;
     },
     closeModal: (state, action) => {
       state.isOpen = false;
       state.compName = null;
       state.mdlChildPst = "center";
+      state.childrenProps = {};
     },
   },
 });
